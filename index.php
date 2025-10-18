@@ -1,9 +1,11 @@
 <?php
 /**
- * Secure Redirect Script for josegregoriohernandez.info
+ * Secure Redirect Script with Multi-Language Support for josegregoriohernandez.info
  *
- * Redirects traffic from index.php to jose_gregorio_hernandez.html using
+ * Redirects traffic from index.php to the appropriate language version using
  * secure, server-side practices:
+ *  - Automatic browser language detection (Spanish/English)
+ *  - Cookie-based language preference storage
  *  - No output before PHP so headers can be sent safely
  *  - Relative Location header (avoids trusting Host header)
  *  - Security headers (CSP, Referrer-Policy, etc.)
@@ -30,17 +32,76 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') {
     header('Strict-Transport-Security: max-age=63072000; includeSubDomains; preload');
 }
 
-// Define the target file (relative to this script directory)
-$target_file = 'jose_gregorio_hernandez.html';
+/**
+ * Detect user's preferred language
+ * Priority: 1) Cookie preference, 2) Browser language, 3) Default (Spanish)
+ *
+ * @return string Language code ('es' or 'en')
+ */
+function detectUserLanguage(): string {
+    // 1. Check if user has a saved preference in cookie
+    if (isset($_COOKIE['preferred_language'])) {
+        $cookieLang = strtolower(trim($_COOKIE['preferred_language']));
+        if ($cookieLang === 'en' || $cookieLang === 'es') {
+            return $cookieLang;
+        }
+    }
+
+    // 2. Check browser's Accept-Language header
+    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+        $browserLang = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+        // Parse the Accept-Language header (format: "en-US,en;q=0.9,es;q=0.8")
+        // Check for English variants
+        if (preg_match('/\b(en)(-[a-z]{2})?\b/i', $browserLang)) {
+            return 'en';
+        }
+
+        // Check for Spanish variants (es, es-MX, es-VE, etc.)
+        if (preg_match('/\b(es)(-[a-z]{2})?\b/i', $browserLang)) {
+            return 'es';
+        }
+    }
+
+    // 3. Default to Spanish
+    return 'es';
+}
+
+/**
+ * Get target file based on detected language
+ *
+ * @param string $lang Language code ('es' or 'en')
+ * @return string Filename
+ */
+function getTargetFile(string $lang): string {
+    $files = [
+        'es' => 'jose_gregorio_hernandez.html',
+        'en' => 'jose_gregorio_hernandez_en.html'
+    ];
+
+    return $files[$lang] ?? $files['es'];
+}
+
+// Detect user's preferred language
+$detectedLang = detectUserLanguage();
+
+// Get the appropriate target file
+$target_file = getTargetFile($detectedLang);
 
 // Validate that the target file exists and is readable (use __DIR__ for a filesystem-accurate check)
 $target_path = __DIR__ . DIRECTORY_SEPARATOR . $target_file;
 if (!is_file($target_path) || !is_readable($target_path)) {
-    // If file doesn't exist, return a proper 404 response
-    http_response_code(404);
-    ob_end_clean();
-    echo 'Error 404: The requested page was not found.';
-    exit;
+    // If file doesn't exist, fall back to Spanish version
+    $target_file = 'jose_gregorio_hernandez.html';
+    $target_path = __DIR__ . DIRECTORY_SEPARATOR . $target_file;
+
+    if (!is_file($target_path) || !is_readable($target_path)) {
+        // If Spanish version also doesn't exist, return 404
+        http_response_code(404);
+        ob_end_clean();
+        echo 'Error 404: The requested page was not found.';
+        exit;
+    }
 }
 
 // Build a relative Location header based on the script location so the redirect works in subdirectories

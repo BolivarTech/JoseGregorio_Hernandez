@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint José Gregorio Hernández - First Venezuelan Saint | josegregoriohernandez.info</title>
+    <meta name="description" content="Official site dedicated to Saint José Gregorio Hernández, the Doctor of the Poor and first Venezuelan saint. Canonized on October 19, 2025.">
+    <meta name="keywords" content="José Gregorio Hernández, Venezuelan Saint, Doctor of the Poor, Venezuela, Catholic Saint, Canonization 2025">
+    <meta name="author" content="josegregoriohernandez.info">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://josegregoriohernandez.info/">
+    <meta property="og:title" content="Saint José Gregorio Hernández - First Venezuelan Saint">
+    <meta property="og:description" content="Learn about the life and legacy of Dr. José Gregorio Hernández, canonized on October 19, 2025.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://josegregoriohernandez.info/">
+    <meta property="twitter:title" content="Saint José Gregorio Hernández - First Venezuelan Saint">
+    <meta property="twitter:description" content="Learn about the life and legacy of Dr. José Gregorio Hernández, canonized on October 19, 2025.">
+
+    <link rel="canonical" href="https://josegregoriohernandez.info/en">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .language-selector {
+            background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .language-selector a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 0.9em;
+        }
+
+        .language-selector a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .language-selector a.active {
+            background: rgba(255,255,255,0.3);
+            font-weight: bold;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            margin-top: 25px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border-left: 5px solid #667eea;
+        }
+
+        .dates {
+            background: #2c3e50;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .virtues {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .virtue-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.1em;
+            color: #555;
+            padding: 20px;
+            border-left: 4px solid #764ba2;
+            margin: 20px 0;
+            background: #f9f9f9;
+        }
+
+        .quote small {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .gratitude {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 8px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 5px solid #667eea;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            object-fit: cover;
+        }
+
+        .section-image {
+            width: 100%;
+            max-width: 350px;
+            height: 300px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 3px solid #667eea;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+
+        .image-caption {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .main-image {
+                max-width: 100%;
+                height: 400px;
+            }
+
+            .section-image {
+                max-width: 100%;
+                height: 250px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <div>
+                <span style="opacity: 0.7;">🌐</span> <strong>josegregoriohernandez.info</strong> <span style="opacity: 0.7;">• Official Site</span>
+            </div>
+            <div>
+                <a href="jose_gregorio_hernandez.html">Español</a>
+                <a href="jose_gregorio_hernandez_en.html" class="active">English</a>
+            </div>
+        </div>
+
+        <header>
+            <div style="background: rgba(255,255,255,0.1); display: inline-block; padding: 8px 20px; border-radius: 20px; margin-bottom: 15px; font-size: 0.85em; letter-spacing: 2px;">
+                CATHOLIC SAINT • VENEZUELA
+            </div>
+            <h1>✝ Saint José Gregorio Hernández ✝</h1>
+            <p class="subtitle">The Doctor of the Poor • First Venezuelan Saint</p>
+            <p style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #2c3e50; padding: 12px 25px; border-radius: 8px; margin-top: 20px; font-weight: bold; font-size: 1.1em; display: inline-block; box-shadow: 0 4px 15px rgba(255,215,0,0.4);">
+                📅 Canonization: October 19, 2025
+            </p>
+        </header>
+
+        <div class="content">
+            <!-- Main image of the saint -->
+            <div class="image-container">
+                <img src="images/Jose_Gregorio-org.png" alt="Saint José Gregorio Hernández" class="main-image">
+                <p class="image-caption">Saint José Gregorio Hernández - The Doctor of the Poor</p>
+            </div>
+
+            <section>
+                <h2>Biography</h2>
+                <div class="dates">
+                    October 26, 1864 - June 29, 1919
+                </div>
+
+                <h3>Birth and Early Years</h3>
+                <p>
+                    José Gregorio Hernández Cisneros was born on October 26, 1864, in Isnotú, Trujillo State, Venezuela. From childhood, he showed a deep inclination toward study and a special sensitivity to the suffering of others, qualities that would mark his entire life.
+                </p>
+
+                <h3>Academic Formation</h3>
+                <p>
+                    He completed his medical studies at the Central University of Venezuela in Caracas, graduating with honors as Doctor of Medicine in 1888. His thirst for knowledge led him to Europe, where he completed specialized studies in bacteriology, normal and pathological histology, and experimental physiology at the prestigious universities of Paris and Berlin.
+                </p>
+
+                <h3>Scientific Contributions</h3>
+                <p>
+                    Dr. Hernández was a pioneer in introducing modern scientific medicine to Venezuela. He founded the chairs of Normal and Pathological Histology, Experimental Physiology, and Bacteriology at the Central University of Venezuela. Venezuela owes him the introduction of the microscope and other important scientific advances that revolutionized medical practice in the country.
+                </p>
+
+                <h3>Spiritual Life</h3>
+                <p>
+                    Above all, José Gregorio shone through the holiness of his life, being an example of a convinced Christian and faithful fulfiller of his duty. His spiritual life was founded on three pillars: daily Communion, one hour of daily prayer, and his frequent visits to Jesus in the Blessed Sacrament. These practices gave him the strength to dedicate himself to charity with all his soul.
+                </p>
+                <p>
+                    He was a fervent Franciscan Tertiary and professed a tender devotion to Our Lady of Mercy, Patroness of Caracas. On several occasions he attempted to follow religious life, joining the order of the Brothers of the Christian Schools (La Salle) in 1908, although he had to leave it due to health problems.
+                </p>
+
+                <h3>The Doctor of the Poor</h3>
+                <p>
+                    He earned the title "Doctor of the Poor," a recognition he received from the Venezuelan people for his extraordinary charity. He not only visited needy patients free of charge, but he himself bought their medicines from his own pocket. His office was always open to the humblest, and he never turned away anyone who requested his help, regardless of the time of day or night.
+                </p>
+
+                <h3>His Death</h3>
+                <p>
+                    On June 29, 1919, during one of these acts of charity, while walking through the streets of Caracas to attend to a patient, he was struck by one of the first automobiles circulating in the city. He died shortly after from his injuries, at the age of 54. God surprised him doing charity when He called him to His presence.
+                </p>
+
+                <h3>Recognition by the Church</h3>
+                <p>
+                    Since his death, the Venezuelan people began to venerate him spontaneously, attributing numerous favors and miracles to him. The countless testimonies of graces received through his intercession moved to introduce his cause for beatification.
+                </p>
+                <p>
+                    On January 16, 1986, Holy Father John Paul II publicly declared that Dr. José Gregorio Hernández had practiced Christian virtues to a heroic degree, granting him the title of Venerable. This was a fundamental step on his path to the altars.
+                </p>
+            </section>
+
+            <section>
+                <h2>Medical and Scientific Work</h2>
+
+                <img src="images/Labor_Medica.jpeg" alt="Dr. José Gregorio Hernández practicing medicine" class="section-image">
+                <p class="image-caption">Dr. Hernández dedicated to his medical work</p>
+
+                <p>
+                    Dr. Hernández was a pioneer in introducing modern scientific medicine to Venezuela. He founded the Laboratory of Experimental Physiology, was the country's first bacteriology professor, and introduced the microscope to Venezuela for medical research, thus revolutionizing scientific practice in the health field.
+                </p>
+                <p>
+                    As a teacher, he trained numerous generations of Venezuelan doctors, transmitting to them not only cutting-edge scientific knowledge but also his deep sense of the medical vocation as service to others.
+                </p>
+                <div class="highlight-box">
+                    <strong>His greatest distinction:</strong> He attended poor patients free of charge, not only curing them but also providing them with medicines and money for their sustenance. Many times he paid for his needy patients' medicines from his own pocket. His office was known as "the poor people's office," where everyone was received with the same love and dedication.
+                </div>
+            </section>
+
+            <section>
+                <h2>Popular Devotion and Legacy</h2>
+                <p>
+                    Since his death, the Venezuelan people began to venerate him spontaneously, attributing numerous miracles and favors to him. His tomb in the General Cemetery of the South in Caracas became a place of constant pilgrimage, where thousands of faithful come to ask for his intercession.
+                </p>
+                <p>
+                    Venezuelans invoke him in their needs, especially in health matters, and keep his memory alive by placing his image in homes, medical offices, and hospitals. His figure transcends the religious to become a national symbol of service and dedication to others.
+                </p>
+                <div class="quote">
+                    "Faith without works is dead, and works without faith have no value"
+                    <br><small>- Maxim that guided his life</small>
+                </div>
+            </section>
+
+            <section>
+                <h2>Beatification and Canonization</h2>
+                <p>
+                    On April 30, 2021, Pope Francis authorized the promulgation of the decree that recognized a miracle attributed to his intercession, opening the way for his beatification.
+                </p>
+                <p>
+                    <strong>He was beatified on April 30, 2021</strong> in Caracas, becoming the first Venezuelan blessed.
+                </p>
+
+                <img src="images/Beatificacion.jpg" alt="Beatification ceremony of José Gregorio Hernández" class="section-image">
+                <p class="image-caption">Beatification ceremony in Caracas, 2021</p>
+
+                <div class="highlight-box" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%); color: white; border-left: 5px solid gold;">
+                    <h3 style="color: white; margin-bottom: 15px; font-size: 1.5em;">🎉 HISTORIC CANONIZATION! 🎉</h3>
+                    <p style="font-size: 1.2em; margin-bottom: 10px;">
+                        <strong>On October 19, 2025</strong>, Blessed José Gregorio Hernández will be elevated to the altars and declared a <strong>SAINT</strong> by the Catholic Church.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        This canonization represents a historic moment for Venezuela and all of Latin America, being the first Venezuelan saint officially recognized by the Church. His liturgical memorial is celebrated on October 26.
+                    </p>
+                    <img src="images/Canonizacion.png" alt="Canonization ceremony of José Gregorio Hernández" class="section-image" style="object-fit: contain; height: auto; max-height: 600px;">
+                </div>
+            </section>
+
+            <section>
+                <h2>Virtues that Characterized Him</h2>
+                <div class="virtues">
+                    <div class="virtue-card">Humility</div>
+                    <div class="virtue-card">Charity</div>
+                    <div class="virtue-card">Dedication</div>
+                    <div class="virtue-card">Deep Faith</div>
+                    <div class="virtue-card">Service</div>
+                    <div class="virtue-card">Compassion</div>
+                </div>
+            </section>
+
+            <div class="highlight-box">
+                <h3 style="margin-bottom: 10px;">His Legacy Endures</h3>
+                <p style="margin-bottom: 0;">
+                    Dr. José Gregorio Hernández is venerated throughout Venezuela and Latin America as a model of Christian doctor, committed scientist, and man of faith. His example of selfless service to those most in need continues to inspire new generations of health professionals.
+                </p>
+            </div>
+
+            <section>
+                <h2>Image Gallery</h2>
+                <div class="gallery">
+                    <div>
+                        <img src="images/José_Gregorio_Hernendez-2.jpg" alt="José Gregorio Hernández in his youth" class="gallery-image">
+                        <p class="image-caption">In his youth</p>
+                    </div>
+                    <div>
+                        <img src="images/Tumba.jpg" alt="Tomb of Saint José Gregorio Hernández" class="gallery-image">
+                        <p class="image-caption">His tomb in Caracas</p>
+                    </div>
+                    <div>
+                        <img src="images/Reliquia.png" alt="Relic of Saint José Gregorio Hernández" class="gallery-image">
+                        <p class="image-caption">Relics of the saint</p>
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0;">
+                <h2>Prayer to Saint José Gregorio Hernández</h2>
+                <div class="quote" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-left: 4px solid #667eea;">
+                    Glorious Saint José Gregorio Hernández, doctor of the poor and model of Christian charity, who dedicated your life to the service of the sick and needy. We ask you to intercede before God for us and for all who suffer. Help us to follow your example of love, humility, and dedication to our neighbor. Amen.
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p style="font-size: 1.1em; margin-bottom: 15px; font-weight: bold;">Saint José Gregorio Hernández, pray for us</p>
+            <p style="margin-bottom: 15px; opacity: 0.8;">† Doctor of the Poor • First Venezuelan Saint • Canonized on October 19, 2025 †</p>
+
+            <div class="gratitude">
+                Thank You for the Favors Received!
+            </div>
+
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 0.85em;">
+                <p style="margin-bottom: 5px;"><strong>josegregoriohernandez.info</strong></p>
+                <p style="opacity: 0.7;">Site dedicated to the life and legacy of the first Venezuelan saint by the Bolívar Family</p>
+                <p style="margin-top: 10px; opacity: 0.7;">© 2025 - All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Language preference handler -->
+    <script src="language-preference.js"></script>
+    <!-- Lightbox Image Viewer Script -->
+    <script src="lightbox.js"></script>
+</body>
+</html>
